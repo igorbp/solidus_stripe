@@ -102,7 +102,7 @@ module SolidusStripe
     end
 
     def address_full_name
-      current_order.bill_address&.full_name || form_data[:recipient]
+      current_order.bill_address&.name || form_data[:recipient]
     end
 
     def update_stripe_payment_description
